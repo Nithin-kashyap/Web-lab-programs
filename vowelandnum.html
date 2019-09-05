@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Vowel and Reverse of Number</title>
+</head>
+<body>
+		<input type="text">
+		<input type="button" onclick="run()">Submit</button>
+		
+		<script>
+		function run() {
+			var rev=0,res;
+			      var str = document.querySelector('input').value;
+				  var num = parseInt(str);
+				  if(num)
+				  {
+				  while(num>0)
+				  {
+					res=parseInt(num%10);
+					rev=parseInt(rev*10+res);
+					num=parseInt(num/10);
+				  }
+					document.write(rev);
+				  }
+				  else
+				  {
+				  str= str.toLowerCase();
+					for(var i=0;i<str.length;i++)
+					{
+						if(str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i'  || str.charAt(i)=='o'  || str.charAt(i)=='u')
+						{
+						   break;
+						}
+					}
+					document.write("Leftmost :" + str.charAt(i));
+					document.write("\n position : "+ i+1);
+					
+				  }
+
+		}
+		
+		</script>
+</body>
+</html>
